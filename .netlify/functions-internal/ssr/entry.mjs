@@ -1,12 +1,12 @@
 import { renderers } from './renderers.mjs';
-import { manifest } from './manifest_BfSStmGR.mjs';
+import { manifest } from './manifest_B8BMNoCt.mjs';
 import * as serverEntrypointModule from '@astrojs/netlify/ssr-function.js';
 
-const _page0 = () => import('./chunks/generic_CrKOKfzk.mjs');
-const _page1 = () => import('./chunks/clubs_DfNbjabg.mjs');
-const _page2 = () => import('./chunks/gallery_Dcuo6H_7.mjs');
-const _page3 = () => import('./chunks/news_niCOHQ9L.mjs');
-const _page4 = () => import('./chunks/index_uaCGECyD.mjs');
+const _page0 = () => import('./chunks/generic_DmXYXebh.mjs');
+const _page1 = () => import('./chunks/clubs_CydWeVJz.mjs');
+const _page2 = () => import('./chunks/gallery_BXsEMnQc.mjs');
+const _page3 = () => import('./chunks/news_lhPrYRsl.mjs');
+const _page4 = () => import('./chunks/index_CC9nZ64L.mjs');
 
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
@@ -22,7 +22,7 @@ const _manifest = Object.assign(manifest, {
     middleware
 });
 const _args = {
-    "middlewareSecret": "67a137fd-423f-4f9f-b896-78af348db4a3"
+    "middlewareSecret": "443839cd-be98-45b3-8606-9355c6e6aea5"
 };
 const _exports = serverEntrypointModule.createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
