@@ -1,0 +1,116 @@
+---
+import '../scss/main.scss';
+
+import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
+interface Props {
+  title: string;
+  image?: string;
+  description?: string;
+}
+
+const {
+  title,
+  image = "/assets/img/og-image.jpg",
+  description = "",
+} = Astro.props;
+
+const imageUrl = import.meta.env.PUBLIC_URL
+  ? new URL(image, import.meta.env.PUBLIC_URL)
+  : image;
+
+  
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="product" />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:description" content={description} />
+
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - GBTSDA.com</title>
+    <ViewTransitions />
+  </head>
+  <body>
+
+        <Header />
+
+        <main id="main">
+          <slot />
+        </main>
+
+
+    <script is:inline type="module" src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script is:inline type="module" src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script is:inline type="module" src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script is:inline type="module" src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script is:inline type="module" src="assets/vendor/php-email-form/validate.js"></script>
+    <script is:inline type="module" src="/assets/js/main.js"></script>
+
+    <style is:global>
+      :root {
+      }
+      body {
+        background-color: theme(colors.gray.50);
+      }
+      .animate-in {
+        animation: animate-in 0.5s ease-in-out;
+      }
+      /* Firefox */
+      * {
+        scrollbar-width: auto;
+        scrollbar-color: #c7c7c7 #ededed;
+      }
+
+      /* Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 15px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #ededed;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #c7c7c7;
+        border-radius: 5px;
+        border: 2px solid #ffffff;
+      }
+      @keyframes animate-in {
+        0% {
+          opacity: 0;
+          transform: translateY(1rem);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+
+    <Footer />
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+  </body>
+</html>
+

@@ -1,0 +1,23 @@
+---
+import type { Navigation } from "../data/Navigation";
+
+interface Props {
+  navigation: Navigation,
+}
+const { navigation } = Astro.props;
+const subnav = navigation.subnav;
+const hasSubnav = subnav && subnav.length > 0;
+---
+
+<li class={hasSubnav ? "dropdown" : ""}>
+  <a class="nav-link scrollto" href={`${navigation.slug}`}><span>{navigation.name}</span> <i class="bi bi-chevron-down"></i
+    ></a>
+
+  { subnav && subnav.length > 0 && (
+    <ul>
+      {subnav.map((subnavItem) => (
+        <li><a href={`${subnavItem.slug}`}>{subnavItem.name}</a></li>
+      ))}
+    </ul>
+  )}
+</li>
