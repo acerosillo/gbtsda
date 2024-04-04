@@ -4,10 +4,10 @@ import Layout from "../layouts/Layout.astro";
 import Masters from "../components/Masters.astro";
 import type { Navigation } from "../data/Navigation";
 
-// interface Props {
-//   navigation: Navigation,
-// }
-// const { navigation } = Astro.props;
+interface Props {
+  navigation: Navigation,
+}
+const { navigation } = Astro.props;
 
 ---
 
@@ -429,7 +429,7 @@ import type { Navigation } from "../data/Navigation";
         </div>
       </section>
 
-      <!-- <Masters navigation={navigation} /> -->
+      <Masters navigation={navigation} />
   
 </Layout>
 
