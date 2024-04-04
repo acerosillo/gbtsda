@@ -2,7 +2,7 @@ import { c as createAstro, d as createComponent, r as renderTemplate, f as rende
 import 'kleur/colors';
 import 'html-escaper';
 import contentful from 'contentful';
-import { $ as $$Layout } from './clubs_CNUrUosc.mjs';
+import { $ as $$Layout } from './clubs_LR-gqhvy.mjs';
 import 'clsx';
 
 const contentfulClient = contentful.createClient({
@@ -64,7 +64,7 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Index;
   const { navigation } = Astro2.props;
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "homepage" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section id="hero"> <div class="hero-container"> <!-- <img src="img/header-1.jpg"/> --> <h3>Great Britain Tang Soo Do</h3> <h1>The Ultimate Self-Defense Training</h1> <h2>
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "homepage" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section id="hero"> <div class="hero-container"> <h3>Great Britain Tang Soo Do</h3> <h1>The Ultimate Self-Defense Training</h1> <h2>
 Ancient Korean Martial Arts for men, women & children across the globe
 </h2> <a href="#history" class="btn-get-started scrollto">Our Art</a> </div> </section>  <section id="history" class="about"> <div class="container"> <div class="section-title"> <h2>History</h2> <h3>History of <span>Tang Soo Do</span></h3> </div> <div class="row content"> <div class="col-lg-4"> <img src="assets/img/shin-monks.png" class="img-fluid" alt=""> <small>Chief Monk Hang Jung welcomes Grandmaster Shin, Shaolin Temple,
                 China 1984</small> </div> <div class="col-lg-4"> <p>

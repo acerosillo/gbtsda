@@ -1,7 +1,7 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, f as renderComponent, m as maybeRenderHead } from '../astro_BSiTW4v7.mjs';
 import 'kleur/colors';
 import 'html-escaper';
-import { $ as $$Layout } from './clubs_CNUrUosc.mjs';
+import { $ as $$Layout } from './clubs_LR-gqhvy.mjs';
 
 const $$Astro = createAstro();
 const $$Gallery = createComponent(async ($$result, $$props, $$slots) => {
