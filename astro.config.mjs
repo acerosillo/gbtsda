@@ -7,9 +7,9 @@ import netlify from "@astrojs/netlify";
 // https://astro.build/config
 export default defineConfig({
   integrations: [db()],
-  output: "hybrid",
+  output: "server",
   adapter: netlify({
-    edgeMiddleware: false,
-    cacheOnDemandPages: false,
+    edgeMiddleware: true,
+    cacheOnDemandPages: true,
   }),
 });
