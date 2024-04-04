@@ -2,7 +2,7 @@ import { c as createAstro, d as createComponent, r as renderTemplate, f as rende
 import 'kleur/colors';
 import 'html-escaper';
 import contentful from 'contentful';
-import { $ as $$Layout } from './clubs_BBlaBvxN.mjs';
+import { $ as $$Layout } from './clubs_CNUrUosc.mjs';
 import 'clsx';
 
 const contentfulClient = contentful.createClient({

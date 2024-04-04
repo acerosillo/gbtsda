@@ -1,16 +1,16 @@
 import LocomotiveScroll from "../../node_modules/locomotive-scroll";
 
-import { gsap } from "../../node_modules/gsap/all";
+// import { gsap } from "../../node_modules/gsap/all";
 
-import { ScrollTrigger } from "../../node_modules/gsap/ScrollTrigger";
-import { ScrollToPlugin } from "../../node_modules/gsap/ScrollToPlugin";
-import { Observer } from "../../node_modules/gsap/Observer";
+// import { ScrollTrigger } from "../../node_modules/gsap/ScrollTrigger";
+// import { ScrollToPlugin } from "../../node_modules/gsap/ScrollToPlugin";
+// import { Observer } from "../../node_modules/gsap/Observer";
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollToPlugin);
-gsap.registerPlugin(Observer);
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollToPlugin);
+// gsap.registerPlugin(Observer);
 
-gsap.registe;
+// gsap.registe;
 
 function init() {
   locomotiveScroll.init();
