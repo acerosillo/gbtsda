@@ -54,7 +54,7 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$Index;
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "homepage" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section id="hero"> <div class="hero-container"> <h3>Great Britain Tang Soo Do</h3> <h1>The Ultimate Self-Defense Training</h1> <h2>
 Ancient Korean Martial Arts for men, women & children across the globe
-</h2> <a href="#history" class="btn-get-started scrollto">Our Art</a> </div> </section>  <section id="history" class="about"> <div class="container"> <div class="section-title"> <h2>History</h2> <h3>History of <span>Tang Soo Do</span></h3> </div> <div class="row content"> <div class="col-lg-4"> <img src="assets/img/shin-monks.png" class="img-fluid" alt=""> <small>Chief Monk Hang Jung welcomes Grandmaster Shin, Shaolin Temple,
+</h2> <a href="#history" class="btn-get-started scrollto">Our Art</a> </div> </section> <section id="history" class="about"> <div class="container"> <div class="section-title"> <h2>History</h2> <h3>History of <span>Tang Soo Do</span></h3> </div> <div class="row content"> <div class="col-lg-4"> <img src="assets/img/shin-monks.png" class="img-fluid" alt=""> <small>Chief Monk Hang Jung welcomes Grandmaster Shin, Shaolin Temple,
                 China 1984</small> </div> <div class="col-lg-4"> <p>
 In 1968 Master Jae Chul Shin came to the United States of
                 America as the U.S. representative for the Korean Soo Bahk Do
@@ -107,7 +107,7 @@ In the past three decades, the Association has expanded from 17
 </li> <li><i class="ri-check-double-line"></i> Honor friendship</li> <li> <i class="ri-check-double-line"></i> No retreat in battle
 </li> <li> <i class="ri-check-double-line"></i> In fighting choose with
                   sense and honor
-</li> </ul> <!-- <a href="#" class="btn-learn-more">Learn More</a> --> </div> </div> </div> <div class="container"></div> </section>   <section id="services" class="services"> <div class="container"> <div class="section-title"> <h2>Services</h2> <h3>Our three <span>aims</span></h3> <p>
+</li> </ul> <!-- <a href="#" class="btn-learn-more">Learn More</a> --> </div> </div> </div> <div class="container"></div> </section> <section id="services" class="services"> <div class="container"> <div class="section-title"> <h2>Services</h2> <h3>Our three <span>aims</span></h3> <p>
 Tang Soo Do is one of the oldest martial art systems and as part
               of the World Tang Soo Do Association we have three aims:
 </p> </div> <div class="row"> <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0"> <div class="icon-box"> <div class="icon"><i class="bx bx-shield-minus"></i></div> <h4 class="title"><a href="">Self Defence</a></h4> <p class="description">
@@ -266,7 +266,7 @@ Boo Kwan Chang Nim Mujahid Khan is currently recognised as a 8th Dan (Pal dan íŒ
 </p> <p>I hold various different fund-raising events mainly in aid of the World Headquarters Building Fund. The most unique one I have held is an auction to raise money for the Headquarters Fund. I auctioned my personal belongings, some that were VERY sentimental, like my 5th Dan Master's Sword that I received during my promotion ceremony. I have also auctioned my Master's belt and some other special items. One which I'll never forget is the dobohk I wore in the making of Kwan Chang Nim's Volume 3 Book-DAE RYUN. We raised over $7000.00 at this one AUCTION!!
 </p> <p>
 Lastly I would like to share a few of my personal beliefs. They are that the success to Martial Arts is to persevere and not to look back. Remember too that you only get out of your training what you PUT INTO IT!! Success comes through a positive mind. Always try to be positive in whatever you may do and you will one day achieve your goals.
-</p> </div> </div> </div> </section>  ` })}`;
+</p> </div> </div> </div> </section> ` })}`;
 }, "/Users/acerosillo/Documents/acerosillo/tsd.com/src/pages/index.astro", void 0);
 
 const $$file = "/Users/acerosillo/Documents/acerosillo/tsd.com/src/pages/index.astro";
