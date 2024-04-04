@@ -298,6 +298,9 @@ h6 {
   display: none;
   line-height: 0;
   transition: 0.5s;
+  width: 50px;
+  height: 45px;
+  border: solid 1px #00ff00;
 }
 
 @media (max-width: 991px) {
