@@ -1,6 +1,6 @@
 ---
 import type { Product } from "../data";
-import { Image } from 'astro:assets';
+//import { Image } from 'astro:assets';
 
 interface Props {
   product: Product;
@@ -16,12 +16,12 @@ const transitionName = product.slug;
   >
     <div class="sm:w-64 w-1/4 overflow-hidden">
 
-        <Image 
+        <!-- <Image 
         src={product.cover}
         alt={product.name}
         class="w-full h-full object-cover rounded-xl shadow-2xl shadow-gray-200 border-b"
         transition:name={`${transitionName} image`}
-        width="350" height="350"/>
+        width="350" height="350"/> -->
         
     </div>
     <div class="p-6">
