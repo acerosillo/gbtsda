@@ -1,4 +1,4 @@
-//import LocomotiveScroll from "../../node_modules/locomotive-scroll";
+import LocomotiveScroll from "../../node_modules/locomotive-scroll";
 
 // import { gsap } from "../../node_modules/gsap/all";
 
@@ -13,7 +13,7 @@
 // gsap.registe;
 
 function init() {
-  // locomotiveScroll.init();
+  locomotiveScroll.init();
   headerScroll.init();
   pageCheck.init();
   // imageParallax.init();
