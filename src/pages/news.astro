@@ -2,8 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="news">
-    <section>
+    <section class="inner-page">
         <div class="container">
+
+          <!-- {entries.items.map((item: any) => (
+            <section>
+              <a href={`/news/${item.sys.id}`}>
+              <h2>{item.fields.newsTitle}</h2>
+              <p>{formatDate(item.fields.newsDate)}</p> 
+          
+              </a>
+            </section>
+          ))} -->
+
+
       <!-- ======= Breadcrumbs ======= -->
       <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">

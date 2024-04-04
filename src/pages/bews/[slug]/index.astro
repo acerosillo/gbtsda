@@ -1,0 +1,61 @@
+---
+
+import { contentfulClient } from "../../../lib/contentful";
+import type { BlogPost } from "../../../data";
+import Layout from "../../../layouts/Layout.astro";
+
+const entries = await contentfulClient.getEntries<BlogPost>({
+        content_type: "tsdNews"
+    });
+console.log(entries);
+
+export async function getStaticProps() {
+    
+    const entries = await contentfulClient.getEntries<BlogPost>({
+        content_type: "tsdNews",
+        'fields.slug': Astro.params.slug, // Access the slug directly from Astro.params
+    });
+
+    const post = entries.items[0];
+
+    // return {
+    //     props: {
+    //         title: post.fields.newsTitle, 
+    //         text: post.fields.newsContent,
+    //     },
+    // };
+
+  //  if (post.sys.id === Astro.params.slug) {
+        return {
+            props: {
+                title: post.fields.newsTitle,
+                text: post.fields.newsContent,
+            },
+        };
+  //  }
+}
+
+
+const { title, text } = Astro.props;
+
+---
+
+<Layout
+    title={title ?? ''}
+    description={text}
+>
+    <div>
+        <ul>
+            <li><a href="/news">Back</a></li>
+            <li><a class="" href="/">home</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <p>Post: {Astro.params.slug}</p> 
+      <h2>Title: {title}</h2>
+      <p>Content: {text}</p>
+    </div>
+</Layout>
+
+

@@ -17,6 +17,8 @@
     "astro": "^4.4.11",
     "bootstrap": "^5.3.3",
     "contentful": "^10.8.1",
+    "gsap": "^3.12.5",
+    "locomotive-scroll": "^5.0.0-beta.11",
     "sass": "^1.71.1"
   },
   "devDependencies": {
