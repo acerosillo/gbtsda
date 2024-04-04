@@ -3,7 +3,6 @@ import 'kleur/colors';
 import 'html-escaper';
 import contentful from 'contentful';
 import { $ as $$Layout } from './clubs_LR-gqhvy.mjs';
-import 'clsx';
 
 const contentfulClient = contentful.createClient({
   space: {"BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true, "SSR": true, "SITE": undefined, "ASSETS_PREFIX": undefined}.CONTENTFUL_SPACE_ID,
@@ -11,8 +10,8 @@ const contentfulClient = contentful.createClient({
   host: "cdn.contentful.com"
 });
 
-const $$Astro$2 = createAstro();
-const Astro = $$Astro$2;
+const $$Astro$1 = createAstro();
+const Astro = $$Astro$1;
 async function getStaticProps() {
   const entries = await contentfulClient.getEntries({
     content_type: "tsdNews",
@@ -28,7 +27,7 @@ async function getStaticProps() {
   };
 }
 const $$Index$1 = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Index$1;
   const entries = await contentfulClient.getEntries({
     content_type: "tsdNews"
@@ -49,21 +48,10 @@ const index$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$1 = createAstro();
-const $$Masters = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
-  Astro2.self = $$Masters;
-  return renderTemplate`${maybeRenderHead()}<section id="masters" class="team"> <div class="container"> <div class="section-title"> <h2>Masters</h2> <h3>Our Great Britain <span>Masters</span></h3> <p>
-Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-          adipisci expedita at voluptas atque vitae autem.
-</p> </div> <div class="row"> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/1.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Grandmaster Khan</h4> <span>8th Dan, European Director</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/2.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master C. Carter</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/3.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master T. Butcher</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/4.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master D. Khan</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/5.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master P. Whiskin</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/2.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master C. Carter</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/3.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master T. Butcher</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/4.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master D. Khan</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/5.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master P. Whiskin</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/2.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master C. Carter</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/3.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master T. Butcher</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/4.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master D. Khan</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/5.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master P. Whiskin</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/2.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master C. Carter</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/3.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master T. Butcher</h4> <span>6th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/4.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master D. Khan</h4> <span>5th Dan</span> </div> </div> </div> <div class="col-lg-2 col-md-4 d-flex align-items-stretch"> <div class="member"> <div class="member-img"> <img src="assets/img/masters/5.jpg" class="img-fluid" alt=""> </div> <div class="member-info"> <h4>Master P. Whiskin</h4> <span>5th Dan</span> </div> </div> </div> </div> </div> </section>`;
-}, "/Users/acerosillo/Documents/acerosillo/tsd.com/src/components/Masters.astro", void 0);
-
 const $$Astro = createAstro();
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Index;
-  const { navigation } = Astro2.props;
   return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "homepage" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section id="hero"> <div class="hero-container"> <h3>Great Britain Tang Soo Do</h3> <h1>The Ultimate Self-Defense Training</h1> <h2>
 Ancient Korean Martial Arts for men, women & children across the globe
 </h2> <a href="#history" class="btn-get-started scrollto">Our Art</a> </div> </section>  <section id="history" class="about"> <div class="container"> <div class="section-title"> <h2>History</h2> <h3>History of <span>Tang Soo Do</span></h3> </div> <div class="row content"> <div class="col-lg-4"> <img src="assets/img/shin-monks.png" class="img-fluid" alt=""> <small>Chief Monk Hang Jung welcomes Grandmaster Shin, Shaolin Temple,
@@ -278,7 +266,7 @@ Boo Kwan Chang Nim Mujahid Khan is currently recognised as a 8th Dan (Pal dan íŒ
 </p> <p>I hold various different fund-raising events mainly in aid of the World Headquarters Building Fund. The most unique one I have held is an auction to raise money for the Headquarters Fund. I auctioned my personal belongings, some that were VERY sentimental, like my 5th Dan Master's Sword that I received during my promotion ceremony. I have also auctioned my Master's belt and some other special items. One which I'll never forget is the dobohk I wore in the making of Kwan Chang Nim's Volume 3 Book-DAE RYUN. We raised over $7000.00 at this one AUCTION!!
 </p> <p>
 Lastly I would like to share a few of my personal beliefs. They are that the success to Martial Arts is to persevere and not to look back. Remember too that you only get out of your training what you PUT INTO IT!! Success comes through a positive mind. Always try to be positive in whatever you may do and you will one day achieve your goals.
-</p> </div> </div> </div> </section> ${renderComponent($$result2, "Masters", $$Masters, { "navigation": navigation })} ` })}`;
+</p> </div> </div> </div> </section>  ` })}`;
 }, "/Users/acerosillo/Documents/acerosillo/tsd.com/src/pages/index.astro", void 0);
 
 const $$file = "/Users/acerosillo/Documents/acerosillo/tsd.com/src/pages/index.astro";
