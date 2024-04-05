@@ -3,6 +3,8 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
+@import "global/remixicon.scss";
+
 html {
   box-sizing: border-box;
   overscroll-behavior: none;
@@ -55,6 +57,9 @@ a:-webkit-any-link:focus-visible {
 */
 
 /*--------------------------------------------------------------
+
+
+
 # General
 --------------------------------------------------------------*/
 body {
