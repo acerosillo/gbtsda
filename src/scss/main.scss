@@ -126,20 +126,41 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  background-color: transparent;
 }
 
 #header .logo {
-  font-size: 20px;
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
 #header .logo a {
   color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  background: url(img/gblogo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0.6;
+  // transition: 0.3s;
+  background-position: 0 0;
+  &:hover {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background: url(img/gblogo.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    background-position: 0 0;
+  }
 }
 
 #header .logo img {
@@ -150,6 +171,9 @@ h6 {
 #header.header-inner-pages {
   background: rgba(0, 0, 0, 0.9);
   padding: 12px 0;
+  .logo a {
+    opacity: 0.9;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -446,15 +470,15 @@ h6 {
 
 #hero .hero-container {
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+  bottom: 2rem;
+  //top: 0;
+  right: 2rem;
+  //right: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
   flex-direction: column;
-  text-align: center;
+  text-align: right;
   padding: 0 15px;
   z-index: 4;
 }
@@ -470,9 +494,9 @@ h6 {
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 48px;
+  font-size: 6rem;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 5rem;
   text-transform: uppercase;
   color: #fff;
 }
