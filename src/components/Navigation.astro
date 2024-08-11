@@ -7,7 +7,7 @@ interface Props {
 const { navigation } = Astro.props;
 const subnav = navigation.subnav;
 const hasSubnav = subnav && subnav.length > 0;
-console.log(navigation)
+//console.log(navigation)
 ---
 
 <li class={hasSubnav ? "dropdown" : ""} key={navigation.id}>

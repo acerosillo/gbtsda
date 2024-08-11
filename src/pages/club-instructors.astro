@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { masters } from "../data/Masters";
+import { clubinstructors } from "../data/ClubInstructors";
 ---
 <Layout title="Club Instructors">
     <section class="inner-page">
@@ -12,20 +12,20 @@ import { masters } from "../data/Masters";
             </p>
             
             <div class="row">
-                {masters.map((mastersItem) => (
+                {clubinstructors.map((ci) => (
                   <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
                   <div class="member">
                     <div class="member-img">
                       <img
-                        src={mastersItem.img}
+                        src={ci.img}
                         class="img-fluid"
                         alt=""
                       />
                     </div>
                     <div class="member-info">
-                      <h4>{mastersItem.name}</h4>
-                      <span>{mastersItem.region ? mastersItem.region : "" }</span>
-                      <span>{mastersItem.title ? mastersItem.title : <br /> }</span>
+                      <h4>{ci.name}</h4>
+                      <span>{ci.region ? ci.region : "" }</span>
+                      <span>{ci.title ? ci.title : <br /> }</span>
                     </div>
                   </div>
                 </div>
