@@ -5,13 +5,13 @@ const ClubFilter = () => {
   const [selectedCounty, setSelectedCounty] = useState("All");
   console.log(clubsData);
   // Generate a list of counties including "All"
-  const counties = ["All", ...new Set(clubsData.map((club) => club.county))];
+  const counties = ["All", ...new Set(clubsData.map((club) => club.region))];
 
   // Filter clubs based on selected county
   const filteredClubs =
     selectedCounty === "All"
       ? clubsData
-      : clubsData.filter((club) => club.county === selectedCounty);
+      : clubsData.filter((club) => club.region === selectedCounty);
 
   return (
     <div>
