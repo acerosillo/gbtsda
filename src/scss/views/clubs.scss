@@ -1,0 +1,15 @@
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  > li {
+    width: 33.333%;
+    padding: 3rem;
+
+    &:nth-child(odd) {
+      background-color: #eee;
+    }
+  }
+}

@@ -3,6 +3,9 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
+//pages
+@import "./views/clubs";
+
 @import "global/remixicon.scss";
 
 html {
@@ -57,8 +60,6 @@ a:-webkit-any-link:focus-visible {
 */
 
 /*--------------------------------------------------------------
-
-
 
 # General
 --------------------------------------------------------------*/
