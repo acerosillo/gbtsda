@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { masters } from "../data/Masters";
+---
+<Layout title="Club Instructors">
+    <section class="inner-page">
+        <div class="container">
+            <br /><br /><br /><br />
+            <h1>Assistant Instructors</h1>
+            <p>
+              Meet our Assistant Instructors of Great Britain Tang Soo Do
+            </p>
+
+            <div class="row">
+                {masters.map((mastersItem) => (
+                  <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
+                  <div class="member">
+                    <div class="member-img">
+                      <img
+                        src={mastersItem.img}
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="member-info">
+                      <h4>{mastersItem.name}</h4>
+                      <span>{mastersItem.region ? mastersItem.region : "" }</span>
+                      <span>{mastersItem.title ? mastersItem.title : <br /> }</span>
+                    </div>
+                  </div>
+                </div>
+                ))}
+        
+              </div>
+        </div>
+    </section>
+</Layout>

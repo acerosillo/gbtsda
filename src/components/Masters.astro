@@ -1,8 +1,7 @@
 ---
-
-
+import { masters } from "../data/Masters";
+console.log(masters)
 ---
-
 
 <section id="masters" class="team">
     <div class="container">
@@ -10,91 +9,29 @@
         <h2>Masters</h2>
         <h3>Our Great Britain <span>Masters</span></h3>
         <p>
-          Ut possimus qui ut temporibus culpa velit eveniet modi omnis est
-          adipisci expedita at voluptas atque vitae autem.
+          Meet our active Masters of Great Britain Tang Soo Do
         </p>
       </div>
 
       <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-2   align-items-stretch">
+        {masters.map((mastersItem) => (
+          <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
           <div class="member">
             <div class="member-img">
               <img
-                src="assets/img/masters/1.jpg"
+                src={mastersItem.img}
                 class="img-fluid"
                 alt=""
               />
             </div>
             <div class="member-info">
-              <h4>Grandmaster Khan</h4>
-              <span>8th Dan, European Director</span>
+              <h4>{mastersItem.name}</h4>
+              <span>{mastersItem.region ? mastersItem.region : "" }</span>
+              <span>{mastersItem.title ? mastersItem.title : <br /> }</span>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
-          <div class="member">
-            <div class="member-img">
-              <img
-                src="assets/img/masters/2.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="member-info">
-              <h4>Master C. Carter</h4>
-              <span>6th Dan</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
-          <div class="member">
-            <div class="member-img">
-              <img
-                src="assets/img/masters/3.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="member-info">
-              <h4>Master T. Butcher</h4>
-              <span>6th Dan</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
-          <div class="member">
-            <div class="member-img">
-              <img
-                src="assets/img/masters/4.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="member-info">
-              <h4>Master D. Khan</h4>
-              <span>5th Dan</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-4 col-sm-6 align-items-stretch">
-          <div class="member">
-            <div class="member-img">
-              <img
-                src="assets/img/masters/5.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <div class="member-info">
-              <h4>Master P. Whiskin</h4>
-              <span>5th Dan</span>
-            </div>
-          </div>
-        </div>
+        ))}
 
       </div>
     </div>

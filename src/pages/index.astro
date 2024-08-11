@@ -2,12 +2,12 @@
 
 import Layout from "../layouts/Layout.astro";
 import Masters from "../components/Masters.astro";
-import type { Navigation } from "../data/Navigation";
+//import type { Navigation } from "../data/Navigation";
 
-interface Props {
-  navigation: Navigation,
-}
-const { navigation } = Astro.props;
+// interface Props {
+//   navigation: Navigation,
+// }
+// const { navigation } = Astro.props;
 
 ---
 
@@ -218,7 +218,7 @@ const { navigation } = Astro.props;
               Gain self-discipline, self-confidence, physical fitness, stress
               management and the ultimate form of self-defense techniques.
             </p>
-            <a class="cta-btn" href="#">Find a club</a>
+            <a class="cta-btn" href="/clubs">Find a club</a>
           </div>
         </div>
       </section>
@@ -437,7 +437,7 @@ const { navigation } = Astro.props;
         </div>
       </section>
 
-      <Masters navigation={navigation} />
+      <Masters />
   
 </Layout>
 

@@ -12,50 +12,83 @@ export interface SubNav {
 }
 
 export const naviData: Navigation[] = [
+  // {
+  //   id: 1,
+  //   name: "Home",
+  //   slug: "/",
+  //   subnav: null,
+  // },
   {
     id: 1,
-    name: "Home",
-    slug: "/",
-    subnav: null,
-  },
-  {
-    id: 2,
-    name: "News",
-    slug: "news",
-    subnav: null,
-  },
-  {
-    id: 3,
-    name: "History",
-    slug: "/#history",
-    subnav: null,
-  },
-  {
-    id: 4,
-    name: "Gallery",
-    slug: "gallery",
-    subnav: null,
-  },
-  {
-    id: 5,
     name: "Grandmasters",
     slug: "/#grandmasters",
     subnav: null,
   },
   {
-    id: 6,
+    id: 2,
     name: "Masters",
     slug: "/#masters",
     subnav: null,
   },
   {
-    id: 7,
+    id: 3,
+    name: "Instructors",
+    slug: "/club-instructors",
+    subnav: [
+      {
+        id: 1,
+        name: "Club Instructors",
+        slug: "/club-instructors",
+      },
+      {
+        id: 2,
+        name: "Instructors",
+        slug: "/instructors",
+      },
+      {
+        id: 3,
+        name: "Assistant Instructors",
+        slug: "/assistant-instructors",
+      },
+      {
+        id: 4,
+        name: "Retired Instructors",
+        slug: "/retired-instructors",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Memorium",
+    slug: "/memorium",
+    subnav: null,
+  },
+  {
+    id: 5,
     name: "Clubs",
     slug: "clubs",
     subnav: null,
   },
   {
+    id: 6,
+    name: "News",
+    slug: "news",
+    subnav: null,
+  },
+  {
+    id: 7,
+    name: "History",
+    slug: "/#history",
+    subnav: null,
+  },
+  {
     id: 8,
+    name: "Gallery",
+    slug: "gallery",
+    subnav: null,
+  },
+  {
+    id: 9,
     name: "Information",
     slug: "",
     subnav: [
