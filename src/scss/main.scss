@@ -444,7 +444,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 50vh;
+  height: 90vh;
   background: url("../img/header-1.jpg") top center;
   background-size: cover;
   position: relative;
@@ -467,7 +467,7 @@ h6 {
     left: 0;
     z-index: 0;
     width: 100vw !important;
-    height: 50vh !important;
+    height: 90vh !important;
     object-fit: cover;
   }
 }
@@ -488,20 +488,19 @@ h6 {
   #hero {
     height: 100vh;
   }
+}
 
-  #hero .hero-container {
-    position: absolute;
-    top: 6rem;
-    left: 0;
-    display: flex;
-    justify-content: right;
-    align-items: right;
-    flex-direction: column;
-    text-align: left;
-    padding: 0 15px;
-    z-index: 4;
-  }
-
+#hero .hero-container {
+  position: absolute;
+  top: 6rem;
+  left: 0;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 15px;
+  z-index: 4;
 }
 
 @include media-breakpoint-up(md) {
