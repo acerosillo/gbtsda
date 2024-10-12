@@ -9,6 +9,7 @@
 @import "./views/header";
 @import "./views/clubs";
 @import "global/remixicon.scss";
+@import "global/iconz.scss";
 
 html {
   box-sizing: border-box;
@@ -132,6 +133,14 @@ h6 {
   height: 100px;
   display: block;
 }
+
+@media (max-width: 991px) {
+  #header .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 
 #header .logo a {
   color: #fff;
@@ -323,9 +332,8 @@ h6 {
   display: none;
   line-height: 0;
   transition: 0.5s;
-  width: 50px;
-  height: 45px;
-  border: solid 1px #00ff00;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 991px) {
