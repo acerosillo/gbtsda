@@ -17,6 +17,7 @@
     "@contentful/rich-text-html-renderer": "^16.3.5",
     "astro": "^4.4.11",
     "bootstrap": "^5.3.3",
+    "boxicons": "^2.1.4",
     "contentful": "^10.8.1",
     "gsap": "^3.12.5",
     "locomotive-scroll": "^5.0.0-beta.11",

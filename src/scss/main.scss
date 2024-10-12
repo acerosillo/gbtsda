@@ -1,11 +1,12 @@
 //@import "global/custom.scss";
+//@import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
+@import 'boxicons';
 
-@import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
 //pages
 @import "./views/clubs";
-
 @import "global/remixicon.scss";
 
 html {
@@ -33,13 +34,6 @@ body {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-// p {
-//   font-size: 1.25rem;
-//   font-style: normal;
-//   font-weight: 300;
-//   line-height: 1.75rem;
-// }
 
 :focus-visible {
   outline: -webkit-focus-ring-color auto 1px;
@@ -2151,6 +2145,5 @@ small {
   margin-bottom: 2rem;
   display: block;
   font-size: 0.8rem;
-  text-align: center;
-  font-style: italic;
+  text-align: left;
 }
