@@ -492,7 +492,7 @@ h6 {
 
 #hero .hero-container {
   position: absolute;
-  top: 6rem;
+  bottom: 1rem;
   left: 0;
   display: flex;
   justify-content: right;
@@ -505,7 +505,6 @@ h6 {
 
 @include media-breakpoint-up(md) {
   #hero .hero-container {
-    top: unset;
     left: unset;
     bottom: 2rem;
     right: 2rem;
