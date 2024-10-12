@@ -1,11 +1,12 @@
 //@import "global/custom.scss";
 //@import "../node_modules/bootstrap/scss/bootstrap";
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap";
 @import 'boxicons';
 
 @import "../node_modules/locomotive-scroll/dist/locomotive-scroll";
 
 //pages
+@import "./views/header";
 @import "./views/clubs";
 @import "global/remixicon.scss";
 

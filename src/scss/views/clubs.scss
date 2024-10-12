@@ -5,11 +5,59 @@
   display: flex;
   flex-wrap: wrap;
   > li {
-    width: 33.333%;
-    padding: 3rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+   
+      border: solid 1px #ddd;
+    
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
 
-    &:nth-child(odd) {
-      background-color: #eee;
+    h4 {
+      font-size: 1rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+  }
+}
+
+.button-tag {
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  min-width: 70px;
+  transition: 0.3s;
+  &:hover {
+    background-color: #e43c5c;
+    color: #fff;
+  }
+}
+
+@include media-breakpoint-up(md) {
+
+  .contact-list {
+    > li {
+      width: 50%;
+      padding: 2rem;
     }
   }
+
+}
+
+@include media-breakpoint-up(lg) { 
+
+  .contact-list {
+    > li {
+      width: 33.333%;
+      padding: 1rem;
+    }
+  }
+
 }
