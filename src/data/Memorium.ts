@@ -1,0 +1,32 @@
+export const memorium = [
+  {
+    id: 1,
+    name: "Grandmaster Jae Chul Shin",
+    rank: "xxth Dan",
+    region: "Region 1",
+    title: "Founder",
+    img: "assets/img/grandmasters/grandmaster-shin.jpg",
+    pageUrl: "",
+    slug: "",
+  },
+  {
+    id: 2,
+    name: "Grandmaster Beaudoin",
+    rank: "xxth Dan",
+    region: "Region 1",
+    title: "",
+    img: "assets/img/grandmasters/grandmaster-beaudoin.jpg",
+    pageUrl: "",
+    slug: "",
+  },
+  {
+    id: 3,
+    name: "Master Bernarte",
+    rank: "",
+    region: "",
+    title: "",
+    img: "assets/img/masters/7.jpg",
+    pageUrl: "/geoff-annis",
+    slug: "geoff-annis",
+  },
+];

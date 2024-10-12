@@ -1,0 +1,32 @@
+export const retiredinstructors = [
+  {
+    id: 1,
+    name: "Instructor Name",
+    rank: "",
+    region: "",
+    title: "",
+    img: "assets/img/instructors/new/KatieAlexander.jpg",
+    pageUrl: "/katie-alexander",
+    slug: "katie-alexander",
+  },
+  {
+    id: 2,
+    name: "Instructor Name",
+    rank: "",
+    region: "",
+    title: "",
+    img: "assets/img/instructors/new/PaulJones.jpg",
+    pageUrl: "/paul-jones",
+    slug: "paul-jones",
+  },
+  {
+    id: 3,
+    name: "Instructor Name",
+    rank: "",
+    region: "",
+    title: "",
+    img: "assets/img/instructors/new/GeoffAnnis.jpg",
+    pageUrl: "/geoff-annis",
+    slug: "geoff-annis",
+  },
+];

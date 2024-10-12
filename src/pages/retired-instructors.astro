@@ -1,28 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { masters } from "../data/Masters";
+import { retiredinstructors } from "../data/RetiredInstructors";
 ---
 <Layout title="Club Instructors">
-    <section class="inner-page">
+    <section class="inner-page team">
         <div class="container">
             <br /><br /><br /><br />
             <h1>Retired Instructors</h1>
             <br /><br />
             <div class="row">
-                {masters.map((mastersItem) => (
+                {retiredinstructors.map((retiredinstructorsItem) => (
                   <div class="col-6 col-lg-2 col-md-4 col-sm-4 align-items-stretch">
                   <div class="member">
                     <div class="member-img">
                       <img
-                        src={mastersItem.img}
+                        src={retiredinstructorsItem.img}
                         class="img-fluid"
                         alt=""
                       />
                     </div>
                     <div class="member-info">
-                      <h4>{mastersItem.name}</h4>
-                      <span>{mastersItem.region ? mastersItem.region : "" }</span>
-                      <span>{mastersItem.title ? mastersItem.title : <br /> }</span>
+                      <h4>{retiredinstructorsItem.name}</h4>
+                      <span>{retiredinstructorsItem.region ? retiredinstructorsItem.region : "" }</span>
+                      <span>{retiredinstructorsItem.title ? retiredinstructorsItem.title : <br /> }</span>
                     </div>
                   </div>
                 </div>
