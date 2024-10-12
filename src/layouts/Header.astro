@@ -10,11 +10,13 @@ import Navigation from "../components/Navigation.astro";
         <ul>
           {naviData.sort((a, b) => a.id - b.id).map((navigation) => <Navigation {navigation} />)}
         </ul>
-        <ul class="socials">
-          <li><a href=""><i class='bx bxl-facebook-square' ></i></a></li>
-          <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
-        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
+
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/gbtsda/" target="_blank"><i class='bx bxl-facebook-square' ></i></a></li>
+        <li><a href="https://www.instagram.com/gb_tang_soo_do/" target="_blank"><i class='bx bxl-instagram' ></i></a></li>
+      </ul>
+
     </div>
   </header>
