@@ -719,6 +719,7 @@ section {
 
 .services .icon-box {
   padding: 60px 30px;
+  margin-bottom: 1.5rem;
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -764,7 +765,7 @@ section {
   font-size: 18px;
 }
 
-.services .title a {
+.services .title {
   color: #111;
 }
 
@@ -775,7 +776,7 @@ section {
   color: #000;
 }
 
-.services .icon-box:hover .title a,
+.services .icon-box:hover .title,
 .services .icon-box:hover .description {
   color: #fff;
 }
