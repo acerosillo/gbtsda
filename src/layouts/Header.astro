@@ -7,7 +7,7 @@ import Navigation from "../components/Navigation.astro";
     <div class="container d-flex align-items-center justify-content-between">
       <h1 class="logo"><a href="/">Great Britain Tang Soo Do</a></h1>
       <nav id="navbar" class="navbar">
-        <ul>
+        <ul role="navigation" aria-label="Main Navigation">
           {naviData.sort((a, b) => a.id - b.id).map((navigation) => <Navigation {navigation} />)}
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

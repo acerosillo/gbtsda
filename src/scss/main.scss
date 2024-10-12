@@ -8,7 +8,7 @@
 //pages
 @import "./views/header";
 @import "./views/clubs";
-@import "global/remixicon.scss";
+//@import "global/remixicon.scss";
 @import "global/iconz.scss";
 
 html {
@@ -445,7 +445,7 @@ h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url("../img/header-1.jpg") top center;
+  background: url("../assets/img/header-1.webp") top center;
   background-size: cover;
   position: relative;
   &:after {
@@ -707,7 +707,7 @@ section {
 
 .services {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)),
-    url("../img/bg.png") center center;
+    url("../assets/img/bg.webp") center center;
   background-size: cover;
   color: #fff;
   padding: 80px 0;
@@ -829,7 +829,7 @@ section {
 --------------------------------------------------------------*/
 .cta {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)),
-    url("../img/header-2.jpg") center center;
+    url("../assets/img/header-2.webp") center center;
   background-size: cover;
   padding: 100px 0;
 }
