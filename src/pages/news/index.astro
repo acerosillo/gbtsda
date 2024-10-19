@@ -6,7 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 
 
 // Function to convert newsTitle into a slug
-const slugify = (text) => {
+const slugify = (text: string) => {
   return text
     .toString()
     .toLowerCase()
@@ -20,7 +20,7 @@ interface BlogPost {
     newsTitle: EntryFieldTypes.Text,
     newsArticle: EntryFieldTypes.RichText,
     newsDate: EntryFieldTypes.Date,
-    newsImage: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>,
+   // newsImage: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>,
   }
 }
 
@@ -58,14 +58,14 @@ const entries = await contentfulClient.getEntries<BlogPost>({
           
               return (
               <article class="entry">
-              <div class="entry-img">
+              {/* <div class="entry-img">
                      {item.fields.newsImage && item.fields.newsImage.length > 0 && (
                     <img
                       src={`https:${item.fields.newsImage[0].fields.file.url}`}
                       alt={item.fields.newsImage[0].fields.title || "News image"}
                     />
                   )}
-              </div>
+              </div> */}
 
               <div class="entry-meta">
                 <ul>

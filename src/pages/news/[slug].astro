@@ -6,7 +6,7 @@ import type { EntryFieldTypes } from "contentful";
 import Layout from "../../layouts/Layout.astro";
 
 // Function to fetch the specific blog post using the slug
-const slugify = (text) => {
+const slugify = (text: string) => {
   return text
     .toString()
     .toLowerCase()
@@ -24,7 +24,7 @@ const entries = await contentfulClient.getEntries<{
     newsTitle: EntryFieldTypes.Text,
     newsArticle: EntryFieldTypes.RichText,
     newsDate: EntryFieldTypes.Date,
-    newsImage: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>,
+  //  newsImage: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>,
   }
 }>({
   content_type: "tsdNews",
@@ -68,7 +68,7 @@ if (!newsItem) {
      
                 <article class="entry">
           
-                  {newsItem.fields.newsImage && newsItem.fields.newsImage.length > 0 && (
+                  <!-- {newsItem.fields.newsImage && newsItem.fields.newsImage.length > 0 && (
                     <div>
                       {newsItem.fields.newsImage.map((image, index) => (
                         <img
@@ -78,7 +78,7 @@ if (!newsItem) {
                         />
                       ))}
                     </div>
-                  )}
+                  )} -->
          
   
                 <div class="entry-meta">
