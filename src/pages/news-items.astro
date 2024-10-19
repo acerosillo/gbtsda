@@ -1,0 +1,43 @@
+---
+import { contentfulClient } from "../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { EntryFieldTypes } from "contentful";
+import { Image } from 'astro:assets';
+
+interface BlogPost {
+  contentTypeId: "tsdNews",
+  fields: {
+    newsTitle: EntryFieldTypes.Text
+    newsArticle: EntryFieldTypes.RichText,
+    newsDate: EntryFieldTypes.Date,
+    newsImage: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>,
+  }
+}
+
+const entries = await contentfulClient.getEntries<BlogPost>({
+  content_type: "tsdNews",
+});
+---
+<body>
+  {entries.items.map((item) => (
+    <section>
+        <date>{new Date(item.fields.newsDate).toLocaleDateString()}</date>
+      <h2>{item.fields.newsTitle}</h2>
+    
+      {/* Check if newsImage exists and has images */}
+      {item.fields.newsImage && item.fields.newsImage.length > 0 && (
+        <div>
+          {item.fields.newsImage.map((image, index) => (
+            <img
+              key={index}
+              src={`https:${image.fields.file.url}`}
+              alt={image.fields.title || `News image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
+
+      <article set:html={documentToHtmlString(item.fields.newsArticle)}></article>
+    </section>
+  ))}
+</body>
