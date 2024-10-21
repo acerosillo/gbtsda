@@ -5,12 +5,16 @@ import ClubFilter from "../components/ClubFilter.jsx";
 
 <Layout title="homepage">
     <section class="inner-page">
-        <div class="container">
-            <br /><br /><br /><br />
-            <h1>Clubs</h1>
 
-            <p>Please select a region for your nearest club : </p>
+        <div class="page-heading">
+            <h1>Clubs</h1>
+            <p>
+                Please select a region for your nearest club :
+            </p>
             <ClubFilter client:load />
-            </div>
+          </div>
+
+
+        <div class="container"></div>
     </section>
 </Layout>

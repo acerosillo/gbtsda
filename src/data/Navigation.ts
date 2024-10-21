@@ -66,13 +66,13 @@ export const naviData: Navigation[] = [
   {
     id: 5,
     name: "Clubs",
-    slug: "clubs",
+    slug: "/clubs",
     subnav: null,
   },
   {
     id: 6,
     name: "News",
-    slug: "news",
+    slug: "/news",
     subnav: null,
   },
   {
@@ -84,7 +84,7 @@ export const naviData: Navigation[] = [
   {
     id: 8,
     name: "Gallery",
-    slug: "gallery",
+    slug: "/gallery",
     subnav: null,
   },
   {

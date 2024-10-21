@@ -4,13 +4,15 @@ import { clubinstructors } from "../data/ClubInstructors";
 ---
 <Layout title="Club Instructors">
     <section class="inner-page team">
+
+      <div class="page-heading">
+          <h1>Club Instructors</h1>
+          <p>
+            Meet our Club Instructors of Great Britain Tang Soo Do
+          </p>
+      </div>
+
         <div class="container">
-            <br /><br /><br /><br />
-            <h1>Club Instructors</h1>
-            <p>
-              Meet our Club Instructors of Great Britain Tang Soo Do
-            </p>
-            
             <div class="row">
                 {clubinstructors.map((ci) => (
                   <div class="col-6 col-lg-2 col-md-4 col-sm-4 align-items-stretch">

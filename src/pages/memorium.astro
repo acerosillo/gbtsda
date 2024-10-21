@@ -4,34 +4,46 @@ import { memorium } from "../data/Memorium";
 ---
 <Layout title="Club Instructors">
     <section class="inner-page team">
-        <div class="container">
-            <br /><br /><br /><br />
-            <h1>Memorium</h1>
-            <p>
-              Honoring the legacy of our fallen masters, their wisdom lives on in every lesson and memory they left behind.
-            </p>
 
-            <div class="row">
-                {memorium.map((memoriumItem) => (
-                  <div class="col-12 align-items-stretch">
-                  <div class="member">
+      <div class="page-heading">
+        <h1>Memorium</h1>
+        <p>
+          Honoring the legacy of our fallen masters, their wisdom lives on in every lesson and memory they left behind.
+        </p>
+      </div>
+
+
+        <div class="container">
+            <div class="row memorium-page">
+              {memorium.map((memoriumItem) => (
+                <div class="col-12 col-md-6 col-lg-4 align-items-stretch">
+                  <article class="member">
                     <div class="member-img">
                       <img
                         src={memoriumItem.img}
                         class="img-fluid"
-                        alt=""
+                        alt={`Portrait of ${memoriumItem.name}`}
                       />
                     </div>
                     <div class="member-info">
-                      <h4>{memoriumItem.name}</h4>
-                      <span>{memoriumItem.region ? memoriumItem.region : "" }</span>
-                      <span>{memoriumItem.title ? memoriumItem.title : <br /> }</span>
+                      <h4 class="member-name">{memoriumItem.name}</h4>
+                      {memoriumItem.region && <p class="member-region">{memoriumItem.region}</p>}
+                      {memoriumItem.title && <p class="member-title">{memoriumItem.title}</p>}
+                      
+                      {/* Biography / Copy Section */}
+                      {memoriumItem.biography && (
+                        <div class="member-bio">
+                          <h5 class="bio-heading">In Memory</h5>
+                          <p class="bio-text">{memoriumItem.biography}</p>
+                        </div>
+                      )}
                     </div>
-                  </div>
+                  </article>
                 </div>
-                ))}
-        
-              </div>
+              ))}
+            </div>
+
+
         </div>
     </section>
 </Layout>

@@ -2,8 +2,8 @@ export const instructors = [
   {
     id: 1,
     name: "Instructor Name",
-    rank: "",
-    region: "",
+    rank: "xth Dan",
+    region: "Cambridge",
     title: "",
     img: "assets/img/instructors/new/KatieAlexander.jpg",
     pageUrl: "/katie-alexander",
@@ -12,8 +12,8 @@ export const instructors = [
   {
     id: 2,
     name: "Instructor Name",
-    rank: "",
-    region: "",
+    rank: "xth Dan",
+    region: "Cambridge",
     title: "",
     img: "assets/img/instructors/new/PaulJones.jpg",
     pageUrl: "/paul-jones",
@@ -22,8 +22,8 @@ export const instructors = [
   {
     id: 3,
     name: "Instructor Name",
-    rank: "",
-    region: "",
+    rank: "xth Dan",
+    region: "Cambridge",
     title: "",
     img: "assets/img/instructors/new/GeoffAnnis.jpg",
     pageUrl: "/geoff-annis",
