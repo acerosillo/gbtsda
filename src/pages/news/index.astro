@@ -60,10 +60,15 @@ const entries = await contentfulClient.getEntries<BlogPost>({
                 <div class="entry">
                   <div class="entry-img">
                     <a href={`/news/${slug}`}>
-                        {item.fields.newsImage && item.fields.newsImage.length > 0 && (
+                      {item.fields.newsImage && item.fields.newsImage.length > 0 ? (
                         <img
                           src={`https:${item.fields.newsImage[0].fields.file.url}`}
                           alt={item.fields.newsImage[0].fields.title || "News image"}
+                        />
+                      ) : (
+                        <img
+                          src="img/gbbadge.webp"
+                          alt="Placeholder image"
                         />
                       )}
                       </a>
