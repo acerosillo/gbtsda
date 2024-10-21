@@ -5,12 +5,18 @@ import type { EntryFieldTypes } from "contentful";
 import Layout from "../../layouts/Layout.astro";
 
 // Function to convert newsTitle into a slug
-const slugify = (text: string) => {
+const slugify = (text) => {
   return text
     .toString()
     .toLowerCase()
     .trim()
     .replace(/[\s\W-]+/g, '-');  // Replaces spaces and non-alphanumeric characters with a dash
+}
+
+// Function to truncate article content to 90 characters
+const truncateArticle = (newsArticle) => {
+  const plainText = documentToHtmlString(newsArticle).replace(/<[^>]+>/g, ''); // Remove HTML tags
+  return plainText.length > 90 ? plainText.slice(0, 90) + "..." : plainText;
 }
 
 interface BlogPost {
@@ -32,74 +38,67 @@ const entries = await contentfulClient.getEntries<BlogPost>({
   <section class="inner-page">
       <div class="container">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-        <ol>
-          <li><a href="/">Home</a></li>
-          <li>News</li>
-        </ol>
-        <h2>News</h2>
-      </div>
-    </section>
-    <!-- End Breadcrumbs -->
+        <section id="breadcrumbs" class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li>News</li>
+            </ol>
+            <h2>News</h2>
+          </div>
+        </section>
 
-    <!-- ======= Blog Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-10 entries">
+        <div class="row grid">
 
             {entries.items.map((item) => {
               const slug = slugify(item.fields.newsTitle);
+          
               return (
-                <article class="entry">
+              <article class="col-12 col-lg-4">
+                <div class="entry">
                   <div class="entry-img">
-                    {item.fields.newsImage && item.fields.newsImage.length > 0 && (
-                      <img
-                        src={`https:${item.fields.newsImage[0].fields.file.url}`}
-                        alt={item.fields.newsImage[0].fields.title || "News image"}
-                      />
-                    )}
+                    <a href={`/news/${slug}`}>
+                        {item.fields.newsImage && item.fields.newsImage.length > 0 && (
+                        <img
+                          src={`https:${item.fields.newsImage[0].fields.file.url}`}
+                          alt={item.fields.newsImage[0].fields.title || "News image"}
+                        />
+                      )}
+                      </a>
                   </div>
 
                   <div class="entry-meta">
                     <ul>
                       <li class="d-flex align-items-center">
                         <i class="bi bi-clock"></i>
-                        <a href={`/news/${slug}`}>
-                          <date>{new Date(item.fields.newsDate).toLocaleDateString()}</date>
-                        </a>
+                        <a href={`/news/${slug}`}><date>{new Date(item.fields.newsDate).toLocaleDateString()}</date></a
+                        >
                       </li>
                     </ul>
                   </div>
 
                   <h2 class="entry-title">
-                    <a href={`/news/${slug}`}>
-                      {item.fields.newsTitle}
-                    </a>
+                      <a href={`/news/${slug}`}>
+                        <h2>{item.fields.newsTitle}</h2>
+                      </a>
                   </h2>
-
+                  
                   <div class="entry-content">
-                    <div set:html={documentToHtmlString(item.fields.newsArticle)} />
+                    <p>{truncateArticle(item.fields.newsArticle)}</p>
                     <div class="read-more">
                       <a href={`/news/${slug}`}>Read More</a>
                     </div>
                   </div>
-                </article>
+              </div>
+            </article>
               );
             })}
-
-            <!-- End blog entry -->
-
           </div>
-          <!-- End blog entries list -->
 
-          <!-- End blog sidebar -->
         </div>
-      </div>
     </section>
-    <!-- End Blog Section -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -108,12 +107,13 @@ const entries = await contentfulClient.getEntries<BlogPost>({
           <h3>Find your nearest club</h3>
           <p>
             Gain self-discipline, self-confidence, physical fitness, stress
-            management, and the ultimate form of self-defense techniques.
+            management and the ultimate form of self-defense techniques.
           </p>
           <a class="cta-btn" href="/clubs">Find a club</a>
         </div>
       </div>
     </section>
     <!-- End Cta Section -->
+
   </section>
 </Layout>
