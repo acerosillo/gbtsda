@@ -1,0 +1,40 @@
+.cookies-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .cookies-popup p {
+    margin: 0;
+    flex: 1;
+  }
+
+  .cookies-popup button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .cookies-popup button:hover {
+    background-color: #45a049;
+  }
+
+  .cookies-popup a {
+    color: #4CAF50;
+    text-decoration: underline;
+  }

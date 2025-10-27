@@ -28,6 +28,8 @@ import { instructors } from "../data/Instructors";
                     </div>
                     <div class="member-info">
                       <h4>{instructorItem.name}</h4>
+                      <span>{instructorItem.rank ? instructorItem.rank : "" }</span>
+                      <span>{instructorItem.dannumber ? `#${instructorItem.dannumber}` : ""}</span>
                       <span>{instructorItem.region ? instructorItem.region : "" }</span>
                       <span>{instructorItem.title ? instructorItem.title : <br /> }</span>
                     </div>

@@ -1,0 +1,55 @@
+---
+import { useState, useEffect } from "react";
+---
+
+<div class="marquee-container">
+  <div class="marquee-content" id="marquee">
+    Word1 &bull; Word2 &bull; Word3 &bull; Word4 &bull; Word5 &bull; Word6 &bull; Word7 &bull;
+  </div>
+</div>
+
+<style>
+  .marquee-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200vh;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marqueeAnimation 10s linear infinite;
+  }
+
+  @keyframes marqueeAnimation {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
+
+<script>
+  let lastScrollTop = 0;
+  let marquee = document.getElementById('marquee');
+  let speed = 0.2;
+
+  window.addEventListener('scroll', () => {
+    let st = window.scrollY || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+      marquee.style.animationDirection = 'normal';  // Scroll down → move left
+    } else {
+      marquee.style.animationDirection = 'reverse'; // Scroll up → move right
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // Prevent negative values
+  });
+</script>

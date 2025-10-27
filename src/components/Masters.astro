@@ -26,6 +26,8 @@ import { masters } from "../data/Masters";
             </div>
             <div class="member-info">
               <h4>{mastersItem.name}</h4>
+              <span>{mastersItem.rank ? mastersItem.rank : "" }</span>
+              <span>{mastersItem.dannumber ? `#${mastersItem.dannumber}` : ""}</span>
               <span>{mastersItem.region ? mastersItem.region : "" }</span>
               <span>{mastersItem.title ? mastersItem.title : <br /> }</span>
             </div>

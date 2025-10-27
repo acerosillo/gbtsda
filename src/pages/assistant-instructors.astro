@@ -26,6 +26,8 @@ import { assinstructors } from "../data/AssInstructors";
                     </div>
                     <div class="member-info">
                       <h4>{assinstructorsItem.name}</h4>
+                      <span>{assinstructorsItem.rank ? assinstructorsItem.rank : "" }</span>
+                      <span>{assinstructorsItem.dannumber ? `#${assinstructorsItem.dannumber}` : ""}</span>
                       <span>{assinstructorsItem.region ? assinstructorsItem.region : "" }</span>
                       <span>{assinstructorsItem.title ? assinstructorsItem.title : <br /> }</span>
                     </div>

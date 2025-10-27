@@ -1,32 +1,5 @@
 export const retiredinstructors = [
-  {
-    id: 1,
-    name: "Instructor Name",
-      rank: "xth Dan",
-    region: "Cambridge",
-    title: "",
-    img: "assets/img/instructors/new/KatieAlexander.jpg",
-    pageUrl: "/katie-alexander",
-    slug: "katie-alexander",
-  },
-  {
-    id: 2,
-    name: "Instructor Name",
-      rank: "xth Dan",
-    region: "Cambridge",
-    title: "",
-    img: "assets/img/instructors/new/PaulJones.jpg",
-    pageUrl: "/paul-jones",
-    slug: "paul-jones",
-  },
-  {
-    id: 3,
-    name: "Instructor Name",
-      rank: "xth Dan",
-    region: "Cambridge",
-    title: "",
-    img: "assets/img/instructors/new/GeoffAnnis.jpg",
-    pageUrl: "/geoff-annis",
-    slug: "geoff-annis",
-  },
+{ id: 1, name: "Master Muhammed Shahid", rank: "", region: "", title: "Peterborough TSD", img: "assets/img/masters/muhammedshahid.jpg", pageUrl: "/muhammedshahid", slug: "muhammedshahid" },
+ { id: 2, name: "Master Catherine Smith", rank: "", region: "", title: "No Club at present", img: "assets/img/masters/catherinesmith.jpg", pageUrl: "/catherinesmith", slug: "catherinesmith" },
+  
 ];

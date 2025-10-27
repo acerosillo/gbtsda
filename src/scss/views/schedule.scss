@@ -1,0 +1,35 @@
+.event {
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+}
+.event:nth-child(odd) {
+    background-color: #f0f8ff;
+}
+.event:nth-child(even) {
+    background-color: #f5f5dc;
+}
+.event-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 0 1rem;
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+}
+.event-details {
+    width: 100%;
+    padding: 0 1rem;
+    @include media-breakpoint-up(md) {
+        width: 50%;
+    }
+}
+

@@ -26,6 +26,8 @@ import { clubinstructors } from "../data/ClubInstructors";
                     </div>
                     <div class="member-info">
                       <h4>{ci.name}</h4>
+                      <span>{ci.rank ? ci.rank : "" }</span>
+                      <span>{ci.dannumber ? `#${ci.dannumber}` : ""}</span>
                       <span>{ci.region ? ci.region : "" }</span>
                       <span>{ci.title ? ci.title : <br /> }</span>
                     </div>
