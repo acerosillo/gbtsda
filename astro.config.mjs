@@ -8,9 +8,5 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   //integrations: [db(), react()],
   integrations: [react()],
-  output: "server",
-  adapter: netlify({
-    edgeMiddleware: true,
-    cacheOnDemandPages: true,
-  }),
+  output: "static",
 });
